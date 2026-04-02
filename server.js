@@ -1,16 +1,14 @@
 const express = require('express');
+const cors = require('cors');
 const pool = require('./db');
 
 const app = express();
+app.use(cors());
+
 app.use(express.json());
+app.use(express.static('public'));
 
-// Test route
-app.get('/', (req, res) => {
-  res.send('API is running');
-});
-
-// Example: get all users
-app.get('/users', async (req, res) => {
+app.get('/tables', async (req, res) => {
   try {
     const result = await pool.query('SELECT * FROM "table_1"');
     res.json(result.rows);
@@ -21,6 +19,6 @@ app.get('/users', async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log('Server running on port 3000');
+app.listen(4012, () => {
+  console.log('Server running on port 4012');
 });
