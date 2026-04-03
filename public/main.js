@@ -6,6 +6,8 @@ async function getTable() {
     const request = await fetch('http://database.snailroom.net/view')
     const tables = await request.json();
 
+    ul.innerHTML = '';
+
     tables.forEach(table => {
         ul.innerHTML += `<li>${table.name}</li>`;
     })
