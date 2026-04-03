@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <script src="main.js" defer></script>
     <title>Database</title>
 </head>
 <body>
     <h1>Database App</h1>
-    <button id="view-tables">View tables</button>
-    <ul id="table-list">
-    </ul>
+    <div class="div-element">
+        <p>Add name to table</p>
+        <input type="text" name="" id="name-text-box">
+        <button id="add-name-button">Add name</button>
+    </div>
+    <div class="div-element">
+        <div id="table-rows">
+            <ul id="table-list"></ul>
+        </div>
+    </div>
 </body>
 </html>

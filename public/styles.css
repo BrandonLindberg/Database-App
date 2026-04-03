@@ -1,0 +1,14 @@
+body {
+    background-color: grey;
+}
+
+.div-element {
+    padding: 5px;
+}
+
+#table-rows {
+    border-style: solid;
+    border-color: black;
+    max-width: 25%;
+    min-height: 100px;
+}
